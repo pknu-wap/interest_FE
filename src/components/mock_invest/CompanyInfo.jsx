@@ -13,19 +13,39 @@ export default function CompanyInfo({ scenario, onBack, onViewFinancials }) {
 
   return (
     <>
-      <button onClick={onBack}>← 거래 화면으로</button>
-      <h2>{scenario.stockName}</h2>
-      <p>종목코드 {stockCode}</p>
+      <button className="mock-link" onClick={onBack}>
+        ← 거래 화면으로
+      </button>
+      <h1 className="mock-title">{scenario.stockName}</h1>
+      <p className="mock-subtitle">종목코드 {stockCode}</p>
 
-      <h3>투자 지표</h3>
-      <p>시가총액 {marketCap}</p>
-      <p>ROE {roe}</p>
+      <div className="mock-card">
+        <p className="mock-section">투자 지표</p>
+        <div className="mock-info-row">
+          <span>시가총액</span>
+          <span>{marketCap}</span>
+        </div>
+        <div className="mock-info-row">
+          <span>ROE</span>
+          <span>{roe}</span>
+        </div>
+      </div>
 
-      <h3>가치평가 지표</h3>
-      <p>PER {per}</p>
-      <p>PBR {pbr}</p>
+      <div className="mock-card">
+        <p className="mock-section">가치평가 지표</p>
+        <div className="mock-info-row">
+          <span>PER</span>
+          <span>{per}</span>
+        </div>
+        <div className="mock-info-row">
+          <span>PBR</span>
+          <span>{pbr}</span>
+        </div>
+      </div>
 
-      <button onClick={handleOpenModal}>재무제표 보기</button>
+      <button className="mock-btn primary" onClick={handleOpenModal}>
+        재무제표 보기
+      </button>
 
       {isModalOpen && (
         <FinancialModal

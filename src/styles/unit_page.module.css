@@ -1,0 +1,220 @@
+@media screen and (min-device-width: 300px) {
+    html {
+        font-size: 2.97px;
+    }
+}
+
+@media screen and (min-device-width: 1280px) {
+    html {
+        font-size: 1px;
+    }
+
+    body {
+        background-color: #EDF2FA;
+    }
+
+    .unit_page {
+        position: relative;
+        left: calc(50% - 393rem/2);
+        width: 393rem;
+        height: 100vh;
+
+        background-color: white;
+    }
+}
+
+.unit_page_slogan {
+    position: absolute;
+    left: 24rem;
+
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 500;
+}
+
+.unit_page_slogan.hello1 {
+    top: 96rem;
+    font-size: 16rem;
+    line-height: 19rem;
+    color: #969696;
+}
+
+.unit_page_slogan.hello2 {
+    top: 123rem;
+    font-size: 24rem;
+    line-height: 29rem;
+}
+
+.unit_page_slogan.hello3 {
+    top: 170rem;
+    font-size: 12rem;
+    line-height: 14rem;
+    color: #969696;
+}
+
+.unit_card_roulette {
+        position: absolute;
+        width: 100%;
+        height: 350rem;
+        top: 40%;
+}
+
+.unit_card {
+        position: absolute;
+        width: 264rem;
+        height: 95.83%;
+        left: calc(50% - 264rem/2);
+        top: calc(50% - 95.83%/2);
+
+        box-shadow: 0px 4rem 4rem rgba(0, 0, 0, 0.25);
+        border-radius: 20rem;
+}
+
+.unit_card.left {
+    left: calc(50% - 264rem/2*3 - 50rem);
+}
+
+.unit_card.right {
+    left: calc(50% + 264rem/2 + 50rem);
+}
+
+.unit_card_title.locked {
+    position: absolute;
+    width: 87rem;
+    height: 29rem;
+    left: calc(50% - 87rem/2);
+    top: calc(50% - 29rem/2);
+
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24rem;
+    text-align: center;
+    line-height: 29rem;
+
+    margin: 0px;
+
+    color: #FFFFFF;
+}
+
+.unit_card_title.unlocked {
+    position: absolute;
+    width: 40rem;
+    height: 10rem;
+    left: calc(50% - 40rem/2);
+    top: 34rem;
+
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12rem;
+    text-align: center;
+    line-height: 10rem;
+
+    margin: 0px;
+
+    color: #FFFFFF;
+
+}
+
+.unit_card_subtitle {
+    position: absolute;
+    width: 127rem;
+    height: 36rem;
+    left: calc(50% - 127rem/2);
+    top: 55rem;
+
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20rem;
+
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20rem;
+    line-height: 36rem;
+    text-align: center;
+
+    color: #FFFFFF;
+
+}
+
+.unit_card_button {
+    position: absolute;
+    width: 199rem;
+    height: 36rem;
+    left: calc(50% - 199rem/2);
+    bottom: 24rem;
+
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 18rem;
+
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15rem;
+    text-align: center;
+    line-height: 36rem;
+
+    color: #FFFFFF;
+}
+
+.chapter_title {
+    position: absolute;
+
+    width: 100rem;
+    height: 13rem;
+    left: calc(50% - 100rem/2);
+
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13rem;
+    line-height: 13rem;
+    text-align: center;
+
+    margin: 0px;
+
+    color: rgba(255, 255, 255, 0.64);
+}
+
+.chapter_title.highlight {
+    color: #FFFFFF;
+}
+
+.chapter_progress_indicator {
+    position: absolute;
+    width: 60rem;
+    height: 10rem;
+    left: calc(50% - 60rem/2);
+    top: 245rem;
+
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 8rem;
+    line-height: 10rem;
+    text-align: center;
+
+    margin: 0px;
+
+    color: #FFFFFF;
+}
+
+.chapter_progress_bar_background {
+    position: absolute;
+    width: 199rem;
+    height: 0rem;
+    left: calc(50% - 199rem/2 - 1rem);
+    top: 263rem;
+
+    border: 1rem solid rgba(255, 255, 255, 0.5);
+}
+
+.chapter_progress_bar {
+    position: absolute;
+    width: 199rem;
+    height: 0rem;
+    left: calc(50% - 199rem/2);
+
+    border: 1rem solid #FFFFFF;
+}

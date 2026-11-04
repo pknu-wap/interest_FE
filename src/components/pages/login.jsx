@@ -204,7 +204,7 @@ export default function Login({
           type="button"
           onClick={onSkipTutorial}
         >
-          이미 가입했어요 (튜토리얼 건너뛰기)
+          <span>로그인 없이 둘러보기</span>
         </button>
         {errorMessage && (
           <p className="login-feedback login-feedback--error" role="alert">

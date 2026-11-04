@@ -1,37 +1,29 @@
 import { Link, useParams } from "react-router"
 import { createRoot } from "react-dom/client"
+import { useState, useEffect } from "react"
 
-import unitPageMetadata from "../assets/unit_page/unit_page_metadata.js"
+import UnitCardRoulette from "../components/unit_page/UnitCardRoulette"
+import BottomTab from "../components/common/BottomTab"
+
+import unitCardMetadata from "../assets/unit_page/unit_card_metadata.js"
+import style from "../styles/unit_page.module.css"
 
 export default function UnitPage() {
     const { unitName } = useParams();
-    const currentUnitPageMetadata = unitPageMetadata[unitName];
-
-    if(!currentUnitPageMetadata) {
-        return(<h1>'{unitName}'라는 이름의 유닛은 존재하지 않습니다.</h1>)
-    }
 
     return(
-        <>
-            <h1>{unitName}</h1>
-            <h2>{currentUnitPageMetadata.description}</h2>
-            {
-                (!currentUnitPageMetadata.previousUnit) ? 
-                (<></>) : 
-                (<Link to={"/units/"+currentUnitPageMetadata.previousUnit}>{currentUnitPageMetadata.previousUnit}</Link>)
-            }
-            <br/>
-            {
-                (!currentUnitPageMetadata.nextUnit) ? 
-                (<></>) : 
-                (<Link to={"/units/"+currentUnitPageMetadata.nextUnit}>{currentUnitPageMetadata.nextUnit}</Link>)
-            }
-            <br/><br/>
-            { currentUnitPageMetadata.chapters.map(
-                    (chapterMetadata, index) => (<div key={index}>
-                        <Link to={"/learn/"+chapterMetadata.segment}>{chapterMetadata.name}</Link>
-                        </div>)
-                )}
-        </>
+        <div className={style.unit_page}>
+            <p className={`${style.unit_page_slogan} ${style.hello1}`}>
+                안녕하세요, Test1님!
+            </p>
+            <p className={`${style.unit_page_slogan} ${style.hello2}`}>
+                오늘은 뭘 배워볼까요?
+            </p>
+            <p className={`${style.unit_page_slogan} ${style.hello3}`}>
+                금융 용어 외우기
+            </p>
+            <UnitCardRoulette unitName={unitName}/>
+            <BottomTab />
+        </div>
     );
 }

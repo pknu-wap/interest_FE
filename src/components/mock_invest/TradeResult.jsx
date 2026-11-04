@@ -10,32 +10,40 @@ export default function TradeResult({ scenario, result, onRetry }) {
 
   return (
     <>
-      <p>
+      <p className="mock-subtitle">
         {scenario.stockName} · {finalDay}일차 / 거래 결과
       </p>
-      <h1>
-        {sign}
-        {profit.toLocaleString()}원 ({sign}
-        {rate.toFixed(1)}%)
-      </h1>
 
-      <h3>거래 리포트 피드백</h3>
-      {trades.length === 0 ? (
-        <p>거래 기록이 없어요.</p>
-      ) : (
-        <>
-          {goods.map((text, index) => (
-            <p key={"good" + index}>👍 잘한 점: {text}</p>
-          ))}
-          {misses.map((text, index) => (
-            <p key={"miss" + index}>👀 놓친 지표: {text}</p>
-          ))}
-        </>
-      )}
+      <div className="mock-card">
+        <h1 className={"mock-result " + (profit >= 0 ? "up" : "down")}>
+          {sign}
+          {profit.toLocaleString()}원 ({sign}
+          {rate.toFixed(1)}%)
+        </h1>
+      </div>
 
-      <button onClick={onRetry}>다시 해보기</button>
-      <Link to="/units/unit1">A Part 리마인드</Link> 
-      // 추후에 리마인드 설정을 개별로 해야되는데 이거는 추후 설정해야
+      <div className="mock-card mock-feedback">
+        <p className="mock-section">거래 리포트 피드백</p>
+        {trades.length === 0 ? (
+          <p>거래 기록이 없어요.</p>
+        ) : (
+          <>
+            {goods.map((text, index) => (
+              <p key={"good" + index}>👍 잘한 점: {text}</p>
+            ))}
+            {misses.map((text, index) => (
+              <p key={"miss" + index}>👀 놓친 지표: {text}</p>
+            ))}
+          </>
+        )}
+      </div>
+
+      <button className="mock-btn" onClick={onRetry}>
+        다시 해보기
+      </button>
+      <Link className="mock-btn primary" to="/units/unit1">
+        A Part 리마인드
+      </Link>
     </>
   );
 }

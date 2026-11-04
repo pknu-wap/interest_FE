@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useParams } from "react-router";
 
 import learnPageMetadata from "../assets/learn_page/learn_page_metadata.js";
-import BottomTab from "../components/learn_page/BottomTab";
+import BottomTab from "../components/common/BottomTab.jsx";
 import InterestSimulation from "../components/learn_page/InterestSimulation";
 import "./LearnPage.css";
 
@@ -98,7 +98,7 @@ export default function LearnPage() {
 
           <div className="learn-action">{isAnswered && renderNextButton()}</div>
 
-          <BottomTab active="배우기" />
+          <BottomTab />
         </>
       ) : (
         <>

@@ -1,10 +1,10 @@
 export default function ScenarioCard({ scenario, onSelect }) {
   return (
-    <button onClick={() => onSelect(scenario)}>
-      <div>
+    <button className="mock-scenario" onClick={() => onSelect(scenario)}>
+      <strong>
         {scenario.stockName} · {scenario.startDate}
-      </div>
-      <div>{scenario.description}</div>
+      </strong>
+      <span>{scenario.description}</span>
     </button>
   );
 }

@@ -40,13 +40,13 @@
 }
 
 .login-screen::before {
-  background-image: url("/login_intro_artwork.png");
+  background-image: url("../../assets/login_intro_artwork.png");
 }
 
 .login-screen::after {
-  background-image: url("/login_main_artwork.png");
+  background-image: url("../../assets/login_main_artwork.png");
   z-index: 1;
-  animation: login-art-switch 400ms 4.8s both;
+  animation: login-art-switch 600ms 600ms both;
 }
 
 @keyframes login-art-switch {
@@ -96,7 +96,7 @@
   align-items: center;
   gap: 1.53cqw;
 
-  animation: login-actions-enter 500ms 5s both;
+  animation: login-actions-enter 1.2s 1.2s both;
 }
 
 @keyframes login-actions-enter {

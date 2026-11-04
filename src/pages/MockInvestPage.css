@@ -1,0 +1,258 @@
+.mock-page {
+  box-sizing: border-box;
+  max-width: 390px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 24px 20px 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  color: #1a1a1a;
+  background: linear-gradient(180deg, #6bbfe0 0%, #86c7c0 55%, #d8c86c 100%);
+}
+
+.mock-part {
+  margin: 0;
+  text-align: center;
+  font-size: 12px;
+  color: #fff;
+}
+
+.mock-title {
+  margin: 8px 0 0;
+  text-align: center;
+  font-size: 28px;
+  color: #fff;
+}
+
+.mock-subtitle {
+  margin: 0;
+  text-align: center;
+  font-size: 13px;
+  color: #fff;
+}
+
+/* 유리 느낌 공통 */
+.mock-card,
+.mock-scenario,
+.mock-btn,
+.mock-toggle button,
+.mock-banner {
+  background: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 24px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  color: #1a1a1a;
+}
+
+.mock-card {
+  padding: 20px;
+}
+
+/* 시나리오 카드 */
+.mock-scenario {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 20px;
+  text-align: left;
+  font-family: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.mock-scenario strong {
+  font-size: 16px;
+}
+
+/* 버튼 */
+.mock-btn {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 16px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mock-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.mock-btn.primary {
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.mock-btn.sell {
+  color: #c0392b;
+}
+
+.mock-btn.buy {
+  color: #1b7a4a;
+}
+
+.mock-actions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+/* 1일 / 1주 선택 */
+.mock-skip-row {
+  display: flex;
+  gap: 8px;
+}
+
+.mock-toggle {
+  display: flex;
+  gap: 8px;
+}
+
+.mock-toggle button {
+  padding: 10px 16px;
+  border-radius: 20px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.mock-toggle button.active {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.mock-skip-row .mock-btn {
+  flex: 1;
+  width: auto;
+  padding: 10px 16px;
+  border-radius: 20px;
+}
+
+/* 평가금액, 손익 */
+.mock-label {
+  margin: 0;
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.mock-eval {
+  margin: 4px 0;
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.mock-profit {
+  margin: 0 0 8px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.up {
+  color: #1b7a4a;
+}
+
+.down {
+  color: #c0392b;
+}
+
+/* 정보 행 */
+.mock-section {
+  margin: 0 0 6px;
+  font-size: 13px;
+  font-weight: 700;
+  opacity: 0.75;
+}
+
+.mock-info-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  font-size: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.mock-info-row:last-child {
+  border-bottom: none;
+}
+
+.mock-link {
+  align-self: flex-start;
+  padding: 0;
+  border: none;
+  background: none;
+  color: #fff;
+  font-family: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+/* 안전장치 배너 */
+.mock-banner {
+  padding: 16px;
+  background: rgba(255, 236, 160, 0.75);
+}
+
+.mock-banner p {
+  margin: 0 0 10px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.mock-banner-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.mock-banner-actions .mock-btn {
+  padding: 12px;
+  border-radius: 16px;
+}
+
+/* 결과 화면 */
+.mock-result {
+  margin: 4px 0 0;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.mock-feedback p {
+  margin: 8px 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* 재무제표 모달 */
+.mock-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.mock-sheet {
+  box-sizing: border-box;
+  width: min(390px, 100%);
+  padding: 20px 20px 28px;
+  border-radius: 24px 24px 0 0;
+  background: rgba(255, 255, 255, 0.95);
+  color: #1a1a1a;
+}
+
+.mock-sheet h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+
+.mock-sheet .mock-btn {
+  margin-top: 12px;
+}
