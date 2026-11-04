@@ -2,23 +2,28 @@ export default function FinancialModal({ stockName, companyInfo, onClose }) {
   const { financials, per } = companyInfo;
 
   return (
-    <div
-      style={{
-        position: "fixed",
-        inset: 0,
-        background: "rgba(0, 0, 0, 0.5)",
-        display: "flex",
-        alignItems: "flex-end",
-        justifyContent: "center",
-      }}
-    >
-      <div style={{ background: "white", padding: "16px", width: "100%" }}>
+    <div className="mock-overlay">
+      <div className="mock-sheet">
         <h3>{stockName} · 재무제표 요약</h3>
-        <p>매출액 {financials.revenue}</p>
-        <p>영업이익 {financials.operatingProfit}</p>
-        <p>부채비율 {financials.debtRatio}</p>
-        <p>PER {per}</p>
-        <button onClick={onClose}>닫기</button>
+        <div className="mock-info-row">
+          <span>매출액</span>
+          <span>{financials.revenue}</span>
+        </div>
+        <div className="mock-info-row">
+          <span>영업이익</span>
+          <span>{financials.operatingProfit}</span>
+        </div>
+        <div className="mock-info-row">
+          <span>부채비율</span>
+          <span>{financials.debtRatio}</span>
+        </div>
+        <div className="mock-info-row">
+          <span>PER</span>
+          <span>{per}</span>
+        </div>
+        <button className="mock-btn primary" onClick={onClose}>
+          닫기
+        </button>
       </div>
     </div>
   );
