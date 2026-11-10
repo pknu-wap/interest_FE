@@ -101,7 +101,10 @@ export default function TradeMain({ scenario, onBack, onFinish }) {
       </button>
       <h1 className="mock-title">{scenario.stockName}</h1>
       <p className="mock-subtitle">
-        {dayIndex + 1}일차 · 시가 {currentPrice.toLocaleString()}원
+        {scenario.dates
+          ? `${scenario.dates[dayIndex]} (${dayIndex + 1}일차)`
+          : `${dayIndex + 1}일차`}{" "}
+        · 종가 {currentPrice.toLocaleString()}원
       </p>
 
       <div className="mock-skip-row">
@@ -152,6 +155,7 @@ export default function TradeMain({ scenario, onBack, onFinish }) {
 
       {pendingTrade && (
         <SafetyGuardBanner
+          hasPbr={scenario.companyInfo.pbr != null}
           onOpenCompanyInfo={openCompanyInfo}
           onProceed={handleProceed}
         />

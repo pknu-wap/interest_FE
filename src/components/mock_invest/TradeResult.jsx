@@ -4,7 +4,12 @@ import { buildFeedback } from "../../utils/mock_invest/tradeUtils";
 
 export default function TradeResult({ scenario, result, onRetry }) {
   const { profit, rate, finalDay, trades, hasCheckedFinancials } = result;
-  const { goods, misses } = buildFeedback(trades, hasCheckedFinancials);
+  const hasFinancials = Boolean(scenario.companyInfo?.financials);
+  const { goods, misses } = buildFeedback(
+    trades,
+    hasCheckedFinancials,
+    hasFinancials
+  );
 
   const sign = profit >= 0 ? "+" : "";
 
