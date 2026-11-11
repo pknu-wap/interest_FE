@@ -8,7 +8,7 @@
   flex-direction: column;
   gap: 12px;
   color: #1a1a1a;
-  background: linear-gradient(180deg, #6bbfe0 0%, #86c7c0 55%, #d8c86c 100%);
+  background: #86c7c0 url("../assets/Rectangle2.png") center / cover no-repeat;
 }
 
 .mock-part {
@@ -276,4 +276,125 @@
   text-align: center;
   color: #fff;
   opacity: 0.9;
+}
+
+.mock-news-tag {
+  margin: 0 0 6px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #c0392b;
+}
+
+.mock-news-body {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.mock-news-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 0;
+  font-size: 13px;
+}
+.mock-qty {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.mock-qty-stepper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mock-qty-stepper button {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.6);
+  color: #1a1a1a;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.mock-qty-stepper input {
+  box-sizing: border-box;
+  width: 72px;
+  padding: 8px;
+  text-align: center;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1a1a;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  outline: none;
+}
+
+.mock-chips {
+  display: flex;
+  gap: 6px;
+  margin: 10px 0;
+}
+
+.mock-chips button {
+  flex: 1;
+  padding: 8px 0;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.4);
+  color: #1a1a1a;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.mock-hint {
+  margin: 0;
+  text-align: center;
+  font-size: 12px;
+  color: #c0392b;
+}
+.mock-play {
+  position: relative;
+  overflow: hidden;
+}
+
+.mock-play-label {
+  position: relative;
+  z-index: 1;
+}
+
+.mock-play-fill {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  background: rgba(110, 200, 140, 0.55);
+}
+
+.mock-play-fill.running {
+  animation: mock-play-fill linear forwards;
+}
+
+@keyframes mock-play-fill {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
 }
