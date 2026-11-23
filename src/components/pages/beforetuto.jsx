@@ -57,10 +57,6 @@ export default function Tuto({ onSelect }) {
           </button>
         ))}
       </section>
-
-      <div className="beforetuto-tabbar" aria-hidden="true">
-        <div className="beforetuto-home-indicator" />
-      </div>
     </main>
   );
 }

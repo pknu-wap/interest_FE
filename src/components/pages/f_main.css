@@ -1,0 +1,47 @@
+.main-screen {
+  position: relative;
+  width: min(100vw, 393px, calc(100svh * 393 / 852));
+  aspect-ratio: 393 / 852;
+  margin: 0 auto;
+  overflow: hidden;
+  container-type: inline-size;
+  background: #27dfff;
+}
+
+.main-logo {
+  position: absolute;
+  z-index: 1;
+  top: calc(50% + 0.35cqw);
+  left: calc(50% + 0.55cqw);
+  display: block;
+  width: 48.35cqw;
+  height: 37.5cqw;
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-mask-image: url("../../assets/login-mark.png");
+  mask-image: url("../../assets/login-mark.png");
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  animation: main-mark-to-white 3s ease-in forwards;
+  transform: translate(-50%, -50%) rotate(-0.28deg);
+}
+
+@keyframes main-mark-to-white {
+  from {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+
+  to {
+    background-color: #fff;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .main-logo {
+    background-color: #fff;
+    animation: none;
+  }
+}

@@ -1,28 +1,16 @@
-# 금리도 모르면서
+# React + Vite
 
-모르면 잃는다, 기초 금융용어부터 모의투자까지
+This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
-## 요구 사항
+Currently, two official plugins are available:
 
-필요한 런타임, 도구, 버전 및 외부 서비스를 적어 주세요.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## 시작하기
+## React Compiler
 
-저장소 다운로드부터 의존성 설치까지 실제 명령어를 순서대로 작성하세요.
-환경 변수가 필요하면 변수 이름과 용도를 적어 주세요.
-실행 명령어와 최소 사용 예시를 작성하세요.
-UI가 있는 경우 스크린샷을 추가해도 좋습니다.
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## 팀 소개
+## Expanding the Oxlint configuration
 
-팀원 수에 맞게 열을 추가하거나 삭제하고, 이름과 역할을 수정하세요.
-프로필 이미지와 깃허브 링크를 각 팀원의 실제 주소로 교체하세요.
-
-| <img src="https://github.com/octocat.png" width="100"> | <img src="https://github.com/octocat.png" width="100"> | <img src="https://github.com/octocat.png" width="100"> | <img src="https://github.com/octocat.png" width="100"> |
-| :---: | :---: | :---: | :---: |
-| [팀원 1](https://github.com/octocat) | [팀원 2](https://github.com/octocat) | [팀원 3](https://github.com/octocat) | [팀원 4](https://github.com/octocat) |
-| 역할 | 역할 | 역할 | 역할 |
-
-## 라이선스
-
-프로젝트의 라이선스를 선택한 뒤 LICENSE 파일을 추가하고 이 섹션에 연결하세요.
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.

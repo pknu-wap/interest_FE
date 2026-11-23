@@ -1,4 +1,6 @@
+import { useState } from "react";
 import "./tuto.css";
+import GradientBackground from "./gradient-background.jsx";
 
 const introParts = [
   {
@@ -24,14 +26,20 @@ function IntroCard({ part, title, description }) {
 }
 
 export default function Tuto({ onContinue }) {
+  const [isContinuing, setIsContinuing] = useState(false);
+
+  function continueToMain() {
+    if (isContinuing) return;
+
+    setIsContinuing(true);
+    window.setTimeout(() => {
+      if (onContinue) onContinue();
+    }, 200);
+  }
+
   return (
     <main className="tuto-screen">
-      <div className="tuto-background" aria-hidden="true">
-        <span className="tuto-glow tuto-glow--one" />
-        <span className="tuto-glow tuto-glow--two" />
-        <span className="tuto-glow tuto-glow--three" />
-        <span className="tuto-glow tuto-glow--four" />
-      </div>
+      <GradientBackground />
 
       <header className="tuto-heading">
         <p>배우고, 써먹고</p>
@@ -45,16 +53,14 @@ export default function Tuto({ onContinue }) {
       </div>
 
       <button
-        className="tuto-continue"
+        className={`tuto-continue${isContinuing ? " tuto-continue--selected" : ""}`}
         type="button"
-        onClick={onContinue}
+        disabled={isContinuing}
+        onClick={continueToMain}
       >
         시작해볼게요
       </button>
 
-      <div className="tuto-tabbar" aria-hidden="true">
-        <div className="tuto-home-indicator" />
-      </div>
     </main>
   );
 }

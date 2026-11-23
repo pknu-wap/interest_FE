@@ -1,0 +1,114 @@
+.beforetuto-screen {
+  position: relative;
+  width: min(100vw, 393px, calc(100svh * 393 / 852));
+  aspect-ratio: 393 / 852;
+  margin: 0 auto;
+  overflow: hidden;
+  container-type: inline-size;
+  background: #27dfff;
+  color: #fff;
+  font-family: Pretendard, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.beforetuto-background {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  background: linear-gradient(180deg, #27dfff 40.38%, #ffe97a 100%);
+  pointer-events: none;
+}
+
+.beforetuto-heading {
+  position: absolute;
+  z-index: 1;
+  top: 24.43cqw;
+  left: 6.11cqw;
+  color: #fff;
+  font-family: "Ria Sans", Pretendard, "Apple SD Gothic Neo", "Malgun Gothic",
+    sans-serif;
+}
+
+.beforetuto-heading .tuto-eyebrow {
+  margin: 0;
+  font-size: 4.07cqw;
+  font-weight: 700;
+  line-height: 5.85cqw;
+}
+
+.beforetuto-heading h1 {
+  margin: 2.04cqw 0 0;
+  font-size: 6.11cqw;
+  font-weight: 700;
+  line-height: 8.9cqw;
+}
+
+.beforetuto-options {
+  position: absolute;
+  z-index: 1;
+  top: 46.82cqw;
+  left: 6.11cqw;
+  display: grid;
+  width: 87.79cqw;
+  gap: 5.09cqw;
+}
+
+.beforetuto-option {
+  display: flex;
+  width: 100%;
+  height: 45.8cqw;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.29cqw;
+  padding: 0 3cqw;
+  box-sizing: border-box;
+  border: 2px solid transparent;
+  border-radius: 6.11cqw;
+  background: rgb(242 244 251 / 20%);
+  box-shadow: 0 0.51cqw 2.04cqw rgb(0 0 0 / 25%);
+  color: #fff;
+  font-family: inherit;
+  text-align: center;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.beforetuto-option-title,
+.beforetuto-option-description {
+  display: block;
+  width: 100%;
+  margin: 0;
+}
+
+.beforetuto-option-title {
+  font-size: 4.07cqw;
+  font-weight: 700;
+  line-height: 5.85cqw;
+}
+
+.beforetuto-option-description {
+  color: rgb(255 255 255 / 88%);
+  font-size: 3.05cqw;
+  font-weight: 400;
+  line-height: 4.33cqw;
+}
+
+.beforetuto-option--selected {
+  background: #fff;
+  color: #0c124f;
+}
+
+.beforetuto-option--selected .beforetuto-option-description {
+  color: #000F5C;
+}
+
+.beforetuto-option:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+}
+
+.beforetuto-option:disabled {
+  cursor: default;
+}
+

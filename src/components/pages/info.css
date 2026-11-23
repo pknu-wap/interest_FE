@@ -1,0 +1,58 @@
+.info-screen {
+  position: relative;
+  width: min(100vw, calc(100svh * 393 / 852));
+  aspect-ratio: 393 / 852;
+  margin: 0 auto;
+  overflow: hidden;
+  container-type: inline-size;
+  background: #27dfff;
+  color: #fff;
+  font-family: "Ria Sans", Pretendard, "Apple SD Gothic Neo", "Malgun Gothic",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.info-screen .gradient-noise-background {
+  z-index: 0;
+}
+
+.info-greeting {
+  position: absolute;
+  z-index: 1;
+  top: 86.5cqw;
+  left: 50%;
+  display: block;
+  width: 87.79cqw;
+  margin: 0;
+  color: #fff;
+  font-family: "Ria Sans", Pretendard, "Apple SD Gothic Neo", "Malgun Gothic",
+    sans-serif;
+  font-size: 9.16cqw;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: center;
+  transform: translateX(-50%);
+  overflow-wrap: anywhere;
+}
+
+.info-continue {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.info-continue:focus-visible .info-greeting {
+  outline: 3px solid #fff;
+  outline-offset: 6px;
+}
+

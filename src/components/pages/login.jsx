@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import loginMark from "../../assets/login-mark.png";
+import { saveSessionToken } from "../../utils/auth.js";
 import "./login.css";
 
 const KAKAO_STATE_KEY = "kakao_oauth_state";
@@ -86,7 +87,7 @@ export default function Login({
 
         return fetch(KAKAO_LOGIN_ENDPOINT, {
           method: "POST",
-          credentials: "include",
+          credentials: "omit",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ code: authorizationCode, redirectUri }),
         });
@@ -113,6 +114,23 @@ export default function Login({
         return responseBody;
       })
       .then((responseBody) => {
+        const token =
+          responseBody?.accessToken ??
+          responseBody?.access_token ??
+          responseBody?.sessionToken ??
+          responseBody?.token ??
+          responseBody?.data?.accessToken ??
+          responseBody?.data?.access_token ??
+          responseBody?.data?.sessionToken ??
+          responseBody?.data?.token;
+
+        if (typeof token !== "string" || !token.trim()) {
+          throw new Error(
+            "로그인 응답에 세션 토큰이 없습니다. 백엔드가 accessToken 또는 token을 반환하는지 확인해 주세요.",
+          );
+        }
+
+        saveSessionToken(token);
         setStatusMessage("로그인되었습니다.");
         if (onLoginSuccess) {
           onLoginSuccess(
